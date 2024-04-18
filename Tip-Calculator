@@ -1,0 +1,29 @@
+def calculate_tip(total_bill, tip_percentage):
+  """
+  Calculate tip amount based on the total bill and tip percentage.
+  """
+  tip_amount = total_bill * (tip_percentage / 100)
+  return tip_amount
+
+def main():
+  # Input total bill amount
+  total_bill = float(input("Enter total bill amount: $"))
+  # Input tip percentage
+  tip_percentage = float(input("Enter tip percentage (e.g., 15 for 15%): "))
+  # Input number of people splitting the bill
+  num_people = int(input("Enter number of people: "))
+
+  # Calculate tip
+  tip_amount = calculate_tip(total_bill, tip_percentage)
+  # Calculate total amount including tip
+  total_amount = total_bill + tip_amount
+  # Calculate amount per person
+  amount_per_person = total_amount / num_people
+
+  print("\nTotal bill amount: $", total_bill)
+  print("Tip amount: $", tip_amount)
+  print("Total amount (including tip): $", total_amount)
+  print("Amount per person: $", amount_per_person)
+
+if __name__ == "__main__":
+  main()
